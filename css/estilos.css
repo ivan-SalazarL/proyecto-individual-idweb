@@ -1,58 +1,185 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background: #f7f9fc; 
-  color: #333;
-  margin: 20px;
-  line-height: 1.6;
+/* === RESETEO GENERAL === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+/* === ESTILOS BASE === */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #f4f6f7, #d6eaf8);
   color: #2c3e50;
-  font-size: 36px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === ENCABEZADO === */
+header {
+  background: #2980b9;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  border-bottom: 4px solid #1a5276;
+}
+
+header h1 {
+  font-size: 2.3em;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* === NAVEGACIÓN === */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: #fff;
+  background: #3498db;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.activo {
+  background: #1f618d;
+  transform: scale(1.05);
+}
+
+/* === CONTENIDO PRINCIPAL === */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+section, article {
+  margin-bottom: 40px;
 }
 
 h2 {
-  color: #34495e;
-  font-size: 28px;
-  margin-bottom: 15px;
-  border-left: 4px solid #2980b9;
+  color: #2471a3;
+  border-left: 6px solid #3498db;
   padding-left: 10px;
+  margin-bottom: 15px;
 }
 
 h3 {
-  color: #5dade2;
-  font-size: 22px;
-  margin-bottom: 12px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eaf2f8;
+  padding-bottom: 5px;
 }
 
-p {
-  font-size: 16px;
-  margin-bottom: 14px;
-  background: #eaf2f8;
-  padding: 8px 12px;
-  border-radius: 5px;
+p, li {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
+/* === LISTAS === */
 ul, ol {
-  margin-left: 25px;
-  padding-left: 0;
+  background: #eaf2f8;
+  padding: 15px;
+  border-radius: 8px;
   list-style-position: inside;
-  background: #d6eaf8;
+}
+
+/* === IMÁGENES === */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 15px auto;
+}
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* === FORMULARIOS === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, button {
+  font-size: 16px;
   padding: 10px;
-  border-radius: 5px;
+  border: 2px solid #d6eaf8;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-a {
-  color: #117a8b;
-  text-decoration: none;
-  transition: color 0.3s, transform 0.2s;
+input:focus, textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+  background: #f8fdff;
 }
 
-a:hover {
-  color: #0c5460;
-  text-decoration: underline;
-  transform: scale(1.05);
+button {
+  background: #2980b9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1f618d;
+  transform: scale(1.03);
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+  text-align: center;
+  background: #2e86c1;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 4px solid #1a5276;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
 }
