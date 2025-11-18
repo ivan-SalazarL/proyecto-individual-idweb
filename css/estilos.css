@@ -1,20 +1,19 @@
-/* === RESETEO GENERAL === */
+/* reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* === ESTILOS BASE === */
+/* estilo general del cuerpo */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(180deg, #f4f6f7, #d6eaf8);
   color: #2c3e50;
   line-height: 1.6;
-  margin: 0;
 }
 
-/* === ENCABEZADO === */
+/* encabezado */
 header {
   background: #2980b9;
   color: #fff;
@@ -33,7 +32,7 @@ header p {
   opacity: 0.9;
 }
 
-/* === NAVEGACIÓN === */
+/* navegación */
 nav ul {
   list-style: none;
   display: flex;
@@ -50,7 +49,7 @@ nav a {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 nav a:hover,
@@ -59,7 +58,7 @@ nav a.activo {
   transform: scale(1.05);
 }
 
-/* === CONTENIDO PRINCIPAL === */
+/* contenedor principal */
 main {
   max-width: 900px;
   margin: 40px auto;
@@ -69,10 +68,12 @@ main {
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-section, article {
+section,
+article {
   margin-bottom: 40px;
 }
 
+/* títulos */
 h2 {
   color: #2471a3;
   border-left: 6px solid #3498db;
@@ -87,20 +88,22 @@ h3 {
   padding-bottom: 5px;
 }
 
-p, li {
+/* texto y listas */
+p,
+li {
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
-/* === LISTAS === */
-ul, ol {
+ul,
+ol {
   background: #eaf2f8;
   padding: 15px;
   border-radius: 8px;
   list-style-position: inside;
 }
 
-/* === IMÁGENES === */
+/* imágenes generales */
 img {
   max-width: 100%;
   border-radius: 10px;
@@ -108,6 +111,7 @@ img {
   margin: 15px auto;
 }
 
+/* figuras */
 figure {
   text-align: center;
   margin: 20px 0;
@@ -119,7 +123,7 @@ figcaption {
   color: #555;
 }
 
-/* === FORMULARIOS === */
+/* formularios */
 form {
   display: flex;
   flex-direction: column;
@@ -130,15 +134,18 @@ label {
   font-weight: bold;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   font-size: 16px;
   padding: 10px;
   border: 2px solid #d6eaf8;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #2980b9;
   outline: none;
   background: #f8fdff;
@@ -146,7 +153,7 @@ input:focus, textarea:focus {
 
 button {
   background: #2980b9;
-  color: white;
+  color: #fff;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -157,7 +164,7 @@ button:hover {
   transform: scale(1.03);
 }
 
-/* === PIE DE PÁGINA === */
+/* pie de página */
 footer {
   text-align: center;
   background: #2e86c1;
@@ -168,7 +175,159 @@ footer {
   border-top: 4px solid #1a5276;
 }
 
-/* === RESPONSIVE === */
+/* grid para mascotas y juegos */
+.grid-mascotas,
+.tarjetas-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* tarjetas del grid */
+.grid-mascotas article,
+.tarjetas-juegos article {
+  background: #f8fbff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+/* daskar ocupa toda la fila */
+.grid-mascotas article:last-child {
+  grid-column: 1 / -1;
+}
+
+/* sección artistas y canciones (gustos) */
+.seccion-artistas h2,
+.seccion-canciones h2 {
+  margin-bottom: 20px;
+}
+
+/* artistas: 2 por fila */
+.artistas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.artistas-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #eaf2f8;
+  padding: 12px 14px;
+  border-radius: 8px;
+}
+
+.artista-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.artistas-list li strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* si hay cantidad impar de artistas, el último ocupa toda la fila y se centra */
+.artistas-list li:nth-child(odd):last-child {
+  grid-column: 1 / -1;
+  max-width: 450px;
+  justify-self: center;
+}
+
+/* canciones: tarjetas en una columna */
+.canciones-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.canciones-list li {
+  background: #eaf2f8;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.canciones-list h3 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 4px;
+}
+
+/* tablas */
+table.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table.tabla th {
+  background: #2980b9;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+table.tabla td {
+  padding: 12px;
+  background: #f8fbff;
+  border-bottom: 1px solid #d6eaf8;
+}
+
+table.tabla tr:nth-child(even) td {
+  background: #edf4fb;
+}
+
+table.tabla tr:hover td {
+  background: #d6eaf8;
+  transition: 0.2s;
+}
+
+/* botón para subir */
+.btn-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.btn-arriba.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-arriba:hover {
+  transform: translateY(-3px);
+}
+
+/* responsive */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -181,5 +340,15 @@ footer {
   main {
     margin: 20px;
     padding: 20px;
+  }
+
+  /* en pantallas pequeñas, artistas en una sola columna */
+  .artistas-list {
+    grid-template-columns: 1fr;
+  }
+
+  .artistas-list li:nth-child(odd):last-child {
+    max-width: none;
+    justify-self: stretch;
   }
 }
