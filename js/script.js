@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const errores = [];
 
-      if (nombre.length > 0 && nombre.length < 3) {
+      if (nombre.length < 3) {
         errores.push('El nombre debe tener al menos 3 caracteres.');
       }
 
@@ -25,8 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (errores.length > 0) {
         evento.preventDefault();
         alert('Revisa lo siguiente:\n\n' + errores.join('\n'));
+      } else {
+        evento.preventDefault();
+        alert('Formulario enviado correctamente (simulación).');
       }
-
     });
   }
 
