@@ -1,315 +1,248 @@
-/* reset básico */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* estilo general del cuerpo */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #f4f6f7, #d6eaf8);
-  color: #2c3e50;
-  line-height: 1.6;
+  background: linear-gradient(180deg, #0f1218, #161b22);
+  color: #d0d6e0;
+  line-height: 1.7;
 }
 
-/* encabezado */
 header {
-  background: #2980b9;
-  color: #fff;
+  background: #0c0f14;
+  padding: 30px 15px;
   text-align: center;
-  padding: 25px 10px;
-  border-bottom: 4px solid #1a5276;
+  border-bottom: 1px solid #1f2630;
 }
 
 header h1 {
-  font-size: 2.3em;
-  margin-bottom: 8px;
+  font-size: 2.2em;
+  margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1em;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
-/* navegación */
 nav ul {
   list-style: none;
   display: flex;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 15px;
 }
 
 nav a {
-  color: #fff;
-  background: #3498db;
-  padding: 10px 15px;
-  border-radius: 8px;
+  background: #1a1f2a;
+  color: #c7ccd6;
+  padding: 8px 14px;
+  border-radius: 20px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
 }
 
-nav a:hover,
-nav a.activo {
-  background: #1f618d;
-  transform: scale(1.05);
+nav a.activo,
+nav a:hover {
+  background: #2a3140;
+  color: #fff;
 }
 
-/* contenedor principal */
 main {
   max-width: 900px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 50px auto;
+  padding: 40px;
+  background: #0c0f14;
+  border-radius: 18px;
 }
 
-section,
-article {
-  margin-bottom: 40px;
+section {
+  margin-bottom: 50px;
 }
 
-/* títulos */
 h2 {
-  color: #2471a3;
-  border-left: 6px solid #3498db;
-  padding-left: 10px;
-  margin-bottom: 15px;
-}
-
-h3 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #eaf2f8;
-  padding-bottom: 5px;
-}
-
-/* texto y listas */
-p,
-li {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-ul,
-ol {
-  background: #eaf2f8;
-  padding: 15px;
-  border-radius: 8px;
-  list-style-position: inside;
-}
-
-/* imágenes generales */
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  display: block;
-  margin: 15px auto;
-}
-
-/* figuras */
-figure {
-  text-align: center;
-  margin: 20px 0;
-}
-
-figcaption {
-  font-style: italic;
-  font-size: 0.9em;
-  color: #555;
-}
-
-/* formularios */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-label {
-  font-weight: bold;
-}
-
-input,
-textarea,
-button {
-  font-size: 16px;
-  padding: 10px;
-  border: 2px solid #d6eaf8;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #2980b9;
-  outline: none;
-  background: #f8fdff;
-}
-
-button {
-  background: #2980b9;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #1f618d;
-  transform: scale(1.03);
-}
-
-/* pie de página */
-footer {
-  text-align: center;
-  background: #2e86c1;
-  color: white;
-  padding: 15px;
-  font-size: 14px;
-  margin-top: 40px;
-  border-top: 4px solid #1a5276;
-}
-
-/* grid para mascotas y juegos */
-.grid-mascotas,
-.tarjetas-juegos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* tarjetas del grid */
-.grid-mascotas article,
-.tarjetas-juegos article {
-  background: #f8fbff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
-}
-
-/* daskar ocupa toda la fila */
-.grid-mascotas article:last-child {
-  grid-column: 1 / -1;
-}
-
-/* sección artistas y canciones (gustos) */
-.seccion-artistas h2,
-.seccion-canciones h2 {
+  border-left: 4px solid #2a3140;
+  padding-left: 12px;
   margin-bottom: 20px;
 }
 
-/* artistas: 2 por fila */
+p {
+  margin-bottom: 12px;
+  color: #c7ccd6;
+}
+
+img {
+  display: block;
+}
+
+/* ===== MÚSICA ===== */
+
 .artistas-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: none;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
 }
 
 .artistas-list li {
+  background: #121720;
+  padding: 16px;
+  border-radius: 12px;
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  background: #eaf2f8;
-  padding: 12px 14px;
-  border-radius: 8px;
+  gap: 14px;
 }
 
 .artista-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 8px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
+  border-radius: 10px;
   flex-shrink: 0;
 }
 
-.artistas-list li strong {
-  display: block;
-  margin-bottom: 4px;
-}
-
-/* si hay cantidad impar de artistas, el último ocupa toda la fila y se centra */
-.artistas-list li:nth-child(odd):last-child {
-  grid-column: 1 / -1;
-  max-width: 450px;
-  justify-self: center;
-}
-
-/* canciones: tarjetas en una columna */
 .canciones-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: none;
+  list-style: decimal;
+  padding-left: 20px;
 }
 
 .canciones-list li {
-  background: #eaf2f8;
-  padding: 12px 14px;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
-.canciones-list h3 {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 4px;
+/* ===== JUEGOS ===== */
+
+.juegos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
-/* tablas */
-table.tabla {
+.juegos-grid article {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.juegos-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ===== TABLA ===== */
+
+.tabla {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-table.tabla th {
-  background: #2980b9;
-  color: white;
-  padding: 12px;
+.tabla th,
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #2a3140;
   text-align: left;
 }
 
-table.tabla td {
+.tabla th {
+  background: #161b22;
+}
+
+.tabla tr:nth-child(even) {
+  background: #121720;
+}
+
+/* ===== MASCOTAS ===== */
+
+.mascotas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.mascotas-grid article {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.mascotas-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ===== PELÍCULAS ===== */
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.pelicula {
+  background: #121720;
+  padding: 22px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pelicula img {
+  width: 180px;
+  height: auto;
+  align-self: center;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== FORMULARIO ===== */
+
+.formulario-cierre {
+  background: #0f131a;
+  padding: 45px;
+  border-radius: 22px;
+}
+
+.formulario-cierre form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+}
+
+.formulario-cierre input,
+.formulario-cierre textarea {
+  background: #0c0f14;
+  border: 1px solid #2a3140;
+  color: #e5e9f0;
   padding: 12px;
-  background: #f8fbff;
-  border-bottom: 1px solid #d6eaf8;
+  border-radius: 12px;
 }
 
-table.tabla tr:nth-child(even) td {
-  background: #edf4fb;
+.formulario-cierre button {
+  background: #2a3140;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
 }
 
-table.tabla tr:hover td {
-  background: #d6eaf8;
-  transition: 0.2s;
-}
+/* ===== BOTÓN SUBIR ===== */
 
-/* botón para subir */
 .btn-arriba {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #2980b9;
+  background: #2a3140;
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,33 +256,23 @@ table.tabla tr:hover td {
   pointer-events: auto;
 }
 
-.btn-arriba:hover {
-  transform: translateY(-3px);
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
 }
 
-/* responsive */
+/* ===== RESPONSIVE ===== */
+
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
   main {
+    padding: 25px;
     margin: 20px;
-    padding: 20px;
   }
 
-  /* en pantallas pequeñas, artistas en una sola columna */
   .artistas-list {
     grid-template-columns: 1fr;
   }
-
-  .artistas-list li:nth-child(odd):last-child {
-    max-width: none;
-    justify-self: stretch;
-  }
 }
-/* test git */

@@ -180,14 +180,18 @@ class MiServidor(BaseHTTPRequestHandler):
 
         html += """
         </table>
-        <div style="margin-top:40px;">
+        <br><br>
+<div style="text-align:center;">
   <a href="/vida.html"
      style="
-       color:#9bb1ff;
+       background:#2a3140;
+       color:#fff;
+       padding:10px 20px;
+       border-radius:12px;
        text-decoration:none;
-       font-size:14px;
+       display:inline-block;
      ">
-    ← Volver al sitio
+    Volver al sitio
   </a>
 </div>
 
