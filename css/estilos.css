@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #0f1218, #161b22);
+  color: #d0d6e0;
+  line-height: 1.7;
+}
+
+header {
+  background: #0c0f14;
+  padding: 30px 15px;
+  text-align: center;
+  border-bottom: 1px solid #1f2630;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.7;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background: #1a1f2a;
+  color: #c7ccd6;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+nav a.activo,
+nav a:hover {
+  background: #2a3140;
+  color: #fff;
+}
+
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #0c0f14;
+  border-radius: 18px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  border-left: 4px solid #2a3140;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 12px;
+  color: #c7ccd6;
+}
+
+img {
+  display: block;
+}
+
+/* ===== MÚSICA ===== */
+
+.artistas-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+.artistas-list li {
+  background: #121720;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  gap: 14px;
+}
+
+.artista-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.canciones-list {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.canciones-list li {
+  margin-bottom: 15px;
+}
+
+/* ===== JUEGOS ===== */
+
+.juegos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.juegos-grid article {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.juegos-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ===== TABLA ===== */
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla th,
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #2a3140;
+  text-align: left;
+}
+
+.tabla th {
+  background: #161b22;
+}
+
+.tabla tr:nth-child(even) {
+  background: #121720;
+}
+
+/* ===== MASCOTAS ===== */
+
+.mascotas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.mascotas-grid article {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.mascotas-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ===== PELÍCULAS ===== */
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.pelicula {
+  background: #121720;
+  padding: 22px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pelicula img {
+  width: 180px;
+  height: auto;
+  align-self: center;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== FORMULARIO ===== */
+
+.formulario-cierre {
+  background: #0f131a;
+  padding: 45px;
+  border-radius: 22px;
+}
+
+.formulario-cierre form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+}
+
+.formulario-cierre input,
+.formulario-cierre textarea {
+  background: #0c0f14;
+  border: 1px solid #2a3140;
+  color: #e5e9f0;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.formulario-cierre button {
+  background: #2a3140;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* ===== BOTÓN SUBIR ===== */
+
+.btn-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2a3140;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.btn-arriba.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+  main {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  .artistas-list {
+    grid-template-columns: 1fr;
+  }
+}
