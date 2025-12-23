@@ -1,0 +1,425 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #0f1218, #161b22);
+  color: #d0d6e0;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: #0c0f14;
+  padding: 30px 15px;
+  text-align: center;
+  border-bottom: 1px solid #1f2630;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.7;
+}
+
+/* ================= NAV ================= */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background: #1a1f2a;
+  color: #c7ccd6;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+nav a.activo,
+nav a:hover {
+  background: #2a3140;
+  color: #fff;
+}
+
+/* ================= MAIN ================= */
+main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #0c0f14;
+  border-radius: 18px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  border-left: 4px solid #2a3140;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 12px;
+  color: #c7ccd6;
+}
+
+/* ================= MÚSICA – ARTISTAS ================= */
+.artistas-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+.artistas-list li {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.artista-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= MÚSICA – CANCIONES ================= */
+.canciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.cancion-card {
+  background: #121720;
+  padding: 18px;
+  border-radius: 16px;
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+  color: #d0d6e0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cancion-card:hover {
+  transform: translateY(-4px);
+  background: #1a2030;
+}
+
+.cancion-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cancion-card:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+}
+
+.cancion-card h3 {
+  margin-bottom: 6px;
+}
+
+.cancion-card p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* ================= JUEGOS ================= */
+.juegos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.juegos-grid article {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.juegos-grid figure {
+  overflow: hidden;
+  border-radius: 14px;
+  height: 200px; /* FIJO PARA QUE NO DESCUADRE */
+}
+
+.juegos-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* CLAVE */
+  border-radius: 14px;
+  transition: transform 0.35s ease;
+}
+
+.juegos-grid article:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= TABLA ================= */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla th,
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #2a3140;
+  text-align: left;
+}
+
+.tabla th {
+  background: #161b22;
+}
+
+.tabla tr:nth-child(even) {
+  background: #121720;
+}
+
+/* ================= MASCOTAS ================= */
+.mascotas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.mascotas-grid article {
+  background: #121720;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+/* CORRECCIÓN: TAMAÑO UNIFORME PARA MASCOTAS */
+.mascotas-grid figure {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.mascotas-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* EVITA QUE SE ESTIRE */
+  border-radius: 14px;
+}
+
+/* ================= PELÍCULAS ================= */
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.pelicula {
+  background: #121720;
+  padding: 22px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pelicula figure {
+  overflow: hidden;
+  border-radius: 14px;
+  height: 280px; /* ALTO FIJO PARA PELÍCULAS */
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
+.pelicula img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* CLAVE PARA ALINEACIÓN */
+  align-self: center;
+  border-radius: 14px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pelicula:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
+
+/* ================= FORMULARIO ================= */
+.formulario-cierre {
+  background: #0f131a;
+  padding: 45px;
+  border-radius: 22px;
+}
+
+.formulario-cierre form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+}
+
+.formulario-cierre input,
+.formulario-cierre textarea {
+  background: #0c0f14;
+  border: 1px solid #2a3140;
+  color: #e5e9f0;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.formulario-cierre button {
+  background: #2a3140;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ================= BOTÓN SUBIR ================= */
+.btn-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2a3140;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.btn-arriba.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= BOTONES BACKEND Y ADMIN (CORREGIDO) ================= */
+.btn-respuesta,
+.btn-admin,
+#area-privada-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #2a3140;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 20px;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-respuesta:hover, 
+.btn-admin:hover {
+  background: #3a4254;
+  transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  main {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  .artistas-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== HOVER MASCOTAS ===== */
+.mascotas-grid figure {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.mascotas-grid img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mascotas-grid article:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* ===== SECCIÓN ACTIVA ===== */
+.seccion-activa h2 {
+  border-left-color: #9bb1ff;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(155,177,255,0.45);
+}
+
+/* ===== JERARQUÍA DE TÍTULOS ===== */
+header h1 {
+  font-size: 2.4em;
+  letter-spacing: 0.5px;
+}
+
+section > h2 {
+  font-size: 1.5em;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+section > h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #2a3140;
+  opacity: 0.8;
+}
+
+/* Subtítulos internos (h3) */
+article h3 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #e5e9f0;
+}
